@@ -1,4 +1,19 @@
-#This model 
+#What does this model do?
+#1. Downloads recent 1-hour interval stock data for a list of tech-related tickers using `yfinance`.
+#2. Calculates the 14-period RSI using the `ta` (technical analysis) library.
+#3. Detects overbought (RSI > 70) and oversold (RSI < 30) conditions.
+#4. Sends a Telegram alert message when such signals are detected.
+#5. Runs the screening every 15 minutes using the `schedule` library.
+
+#Its limitations
+#Assumes RSI thresholds of 30 and 70 without customization.
+#It doesn’t account for market hours runs even when markets are closed.
+# This does not account for bad trading days when the whole market is oversold.
+#It lacks predictive value, therefore, correlation with some other market indicators can help to improve the profitability of the model
+
+#Possible Improvements
+#Integration with trading platform to execute the trades
+
 import yfinance as yf
 import pandas as pd
 import ta
