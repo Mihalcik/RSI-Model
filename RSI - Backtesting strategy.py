@@ -1,3 +1,25 @@
+#What it does
+#1. Downloads historical stock price data using Yahoo Finance (`yfinance`).
+#2. Calculates the RSI using the `ta` library.
+#3. Simulates trades based on RSI thresholds:
+ #  - Buys when RSI drops below a defined level (e.g., 30).
+  # - Sells when RSI rises above a defined level (e.g., 70).
+#4. Tracks trades and computes the final portfolio value for each ticker.
+#5. Prints trade logs and a summary of results for all tickers.
+
+#Limitations:
+#Does not include trading fees, slippage, or spread.
+#Assumes full position is bought/sold instantly at the current price.
+#Backtests only one strategy (RSI) with fixed thresholds.
+#Uses simplified cash/position logic (no portfolio management or diversification).
+
+#Possible Improvements:
+#Add support for stop-loss and take-profit levels.
+#Incorporate multiple indicators or strategies.
+#Simulate partial position sizing or leverage.
+#Include performance metrics (e.g., Sharpe ratio, max drawdown).
+#Visualize results with plots.
+
 import yfinance as yf
 import pandas as pd
 from ta.momentum import RSIIndicator
