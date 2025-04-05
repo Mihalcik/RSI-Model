@@ -15,8 +15,7 @@
 
 #Possible Improvements:
 #Add support for stop-loss and take-profit levels.
-#Incorporate multiple indicators or strategies.
-#Simulate partial position sizing or leverage.
+#Loop through different RSI parameter combinations to find optimal values for each stock and time period
 #Include performance metrics (e.g., Sharpe ratio, max drawdown).
 #Visualize results with plots.
 
